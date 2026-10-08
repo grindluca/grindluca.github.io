@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Norme sulla privacy</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 42rem; margin: 2rem auto;
+         padding: 0 1rem; line-height: 1.55; color: #1d1d1f; background: #fff; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 1.8rem; }
+  a { color: #0b57d0; } footer { margin-top: 3rem; font-size: .9rem; color: #555; }
+</style>
+</head>
+<body>
+<h1>Norme sulla privacy</h1>
+<p>Ultimo aggiornamento: 8 ottobre 2026</p>
+
+<p>Questa pagina spiega quali dati tratto per preparare le clip degli streamer con cui collaboro,
+dove li tratto e per quanto tempo li tengo. Chi tratta i dati: Luca, raggiungibile all'indirizzo
+indicato in fondo alla pagina.</p>
+
+<h2>Quali dati</h2>
+<ul>
+  <li><strong>Le registrazioni delle live</strong> che lo streamer mi condivide (video e audio,
+      quindi anche la sua voce e la sua immagine).</li>
+  <li><strong>Le trascrizioni</strong> del parlato dei soli momenti che potrebbero diventare clip,
+      ricavate dalle registrazioni.</li>
+  <li><strong>Le clip</strong> che taglio da quelle registrazioni.</li>
+  <li><strong>L'autorizzazione scritta</strong> dello streamer, con la conferma che è maggiorenne, e
+      i messaggi che ci scambiamo per organizzare il lavoro. L'autorizzazione la conservo come prova del
+      permesso finché la collaborazione dura e per 12 mesi dopo la sua fine; poi il servizio la cancella
+      da solo.</li>
+</ul>
+<p>Non chiedo e non uso password o accessi agli account dello streamer.</p>
+
+<h2>Dove</h2>
+<ul>
+  <li><strong>Un server privato</strong> (un VPS di Hetzner Online, in Germania): qui arrivano le
+      registrazioni, qui si fanno la trascrizione e il taglio. La trascrizione della live per
+      trovare i momenti candidati gira su questo server, non presso servizi esterni.</li>
+  <li><strong>Groq</strong>, un servizio di trascrizione negli Stati Uniti: riceve <em>solo
+      l'audio dei tratti</em> delle clip scelte (di solito meno di un minuto ciascuno), per scriverne i
+      sottotitoli. Non riceve il video né la registrazione intera.</li>
+  <li><strong>Anthropic (Claude)</strong>, un servizio di intelligenza artificiale: riceve il
+      <em>testo</em> delle trascrizioni dei momenti candidati per aiutarmi a scegliere le clip
+      migliori e a proporre un titolo. Non riceve il video.</li>
+  <li><strong>Telegram</strong>: prima di consegnarla, ogni clip arriva a me su Telegram per
+      l'approvazione.</li>
+  <li><strong>Google Drive</strong>: la registrazione arriva con un link di Google Drive dello
+      streamer. Appena arriva la richiesta controllo che il link funzioni; la scarico sul server
+      quando arriva il suo turno nella coda di lavoro, e il file nel suo Drive resta suo. Le clip approvate vanno in una
+      cartella del mio Google Drive, una per streamer, aperta in <strong>sola lettura</strong> a chi ha
+      il link: il link lo mando solo allo streamer. Chi ha il link può vedere e scaricare le clip, non
+      modificarle né aggiungerne.</li>
+</ul>
+
+<h2>Per quanto tempo</h2>
+<p>Le cancellazioni le fa il servizio da solo, ogni 10 minuti, senza che nessuno debba ricordarsene.
+Ognuna viene annotata in un registro, e il servizio controlla che il file non esista più.</p>
+<ul>
+  <li><strong>La registrazione</strong> si cancella dal server appena sono scelti i momenti
+      candidati: resta solo un breve tratto attorno a ciascuno. I tratti si cancellano appena le clip
+      sono decise (ogni clip approvata è stata consegnata, le altre sono state scartate). In ogni
+      caso entro <strong>7 giorni</strong> dallo scaricamento sul server.</li>
+  <li><strong>Le clip sul server</strong> si cancellano appena la consegna nella cartella condivisa è
+      verificata. Quelle scartate si cancellano insieme alla registrazione.</li>
+  <li><strong>Le clip nella cartella condivisa</strong> restano <strong>30 giorni</strong> dalla
+      consegna, poi il servizio le cancella definitivamente (non nel cestino). Le copie che lo
+      streamer ha scaricato restano sue. Fa eccezione la clip d'esempio, qui sotto.</li>
+  <li><strong>Le trascrizioni</strong> si cancellano <strong>30 giorni</strong> dopo l'arrivo della
+      registrazione. Da quel momento sul server non resta niente della registrazione: solo il
+      registro delle cancellazioni e i dati di lavorazione, cioè nomi dei file, titoli delle clip,
+      date, durate e tempi, senza le parole dette.</li>
+  <li><strong>Su Telegram</strong> la clip che ricevo per l'approvazione si cancella dalla chat subito
+      dopo la mia decisione; resta un messaggio di testo con il nome della clip, la decisione e l'ora.
+      Se la cancellazione non riesce, il servizio mi avvisa e la cancello a mano.</li>
+  <li><strong>Anthropic</strong> conserva il testo che riceve secondo le proprie norme sulla privacy.</li>
+  <li><strong>Groq</strong> dichiara di non conservare l'audio e i testi delle richieste; può tenerli
+      al massimo 30 giorni solo per risolvere errori o controllare abusi, secondo le proprie norme
+      sulla privacy.</li>
+  <li>Se lo streamer revoca il permesso, o quando la collaborazione finisce, il servizio toglie il
+      link e cancella la sua cartella con le clip dentro, definitivamente.</li>
+  <li>Su richiesta dello streamer cancello i suoi dati prima di queste scadenze: basta scrivere
+      all'indirizzo qui sotto.</li>
+</ul>
+
+<h2>Clip d'esempio</h2>
+<p>Una clip può servirmi come esempio da mostrare ad altri streamer: la tengo in una mia cartella di
+Google Drive e la mostro con un link in sola lettura. Lo faccio solo con un permesso scritto dello
+streamer, separato da quello per le clip. Senza quel permesso il servizio rifiuta sia la copia sia il
+link.</p>
+<ul>
+  <li>La clip d'esempio resta finché lo streamer non revoca il permesso: non scade dopo 30 giorni.</li>
+  <li>Lo streamer può revocarlo quando vuole, scrivendo all'indirizzo qui sotto. Alla revoca il
+      servizio toglie i link e cancella le sue clip d'esempio definitivamente (non nel cestino), e senza
+      un permesso nuovo non ne copia altre.</li>
+</ul>
+
+<h2>Chi pubblica le clip</h2>
+<p>Io non pubblico le clip da nessuna parte. Le clip restano dello streamer: decide lui se e dove
+pubblicarle.</p>
+
+<h2>Contatti</h2>
+<p>Per domande sui dati o per chiederne la cancellazione:
+<a href="mailto:campanaluca.clip@gmail.com">campanaluca.clip@gmail.com</a>.</p>
+
+<footer><a href="index.html">Torna alla pagina principale</a></footer>
+</body>
+</html>
