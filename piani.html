@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Piani – Clip Luke</title>
 <meta name="description" content="Scegli quante clip vuoi. Si parte sempre da 7 clip gratis.">
+<meta property="og:site_name" content="Clip Luke">
+<meta property="og:title" content="Piani – Clip Luke">
+<meta property="og:description" content="Scegli quante clip vuoi. Si parte sempre da 7 clip gratis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://clipluke.com/piani.html">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://clipluke.com/img/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Clip Luke: Le tue live meritano più di un VOD.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Piani – Clip Luke">
+<meta name="twitter:description" content="Scegli quante clip vuoi. Si parte sempre da 7 clip gratis.">
+<meta name="twitter:image" content="https://clipluke.com/img/og.png">
 <style>
 @font-face{font-family:"Instrument Serif";src:url("font/InstrumentSerif-Regular.ttf") format("truetype");font-style:normal;font-display:swap}
 @font-face{font-family:"Instrument Serif";src:url("font/InstrumentSerif-Italic.ttf") format("truetype");font-style:italic;font-display:swap}
@@ -118,6 +133,9 @@ footer .wrap{padding-top:64px;padding-bottom:40px;display:flex;flex-direction:co
   border-radius:20px;background:#F7F4EE}
 .facts b{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:30px;line-height:1.1}
 .facts span{font-size:15px;line-height:1.6;color:#4A4740}
+/* 15/10 (Luca: il telefono e' perfetto cosi'): dal tablet in su i tre telefoni dell'eroe stanno in fila. Senza,
+   ".hero>div" (specificita' 0,1,1) impone flex-direction:column anche a .phones e l'eroe arriva a 1.650 px */
+@media (min-width:641px){.hero>.phones{flex-direction:row;align-items:flex-start;justify-content:center;gap:18px}}
 @media (max-width:640px){
   .wrap{padding:0 18px}
   header.top{padding-top:18px;padding-bottom:18px}
@@ -155,7 +173,7 @@ footer .wrap{padding-top:64px;padding-bottom:40px;display:flex;flex-direction:co
 <p class="kicker">Piani</p>
 <h1 class="serif">Scegli quante clip vuoi.</h1>
 <p class="l">Si parte sempre da 7 clip gratis. Poi scegli il piano che va col tuo ritmo di live.</p>
-<div class="seats"><span class="dot" aria-hidden="true"></span><span>Prezzo fondatori per i primi 10 streamer · posti rimasti: <strong>10 su 10</strong> (al 14/10/2026)</span></div>
+<div class="seats"><span class="dot" aria-hidden="true"></span><span>Prezzo fondatori per i primi 10 streamer · posti rimasti: <strong>10 su 10</strong> (al 15/10/2026)</span></div>
 </section>
 <section class="wrap plans" aria-label="I piani">
 <article class="pc">
@@ -211,6 +229,7 @@ footer .wrap{padding-top:64px;padding-bottom:40px;display:flex;flex-direction:co
 <div>
 <span class="serif">Pronto a dare una seconda vita alle tue live?</span>
 <div class="row">
+<a class="btn" href="https://www.twitch.tv/clipluca">Scrivimi su Twitch</a>
 <a class="btn ghost mail" href="mailto:campanaluca.clip@gmail.com">campanaluca.clip@gmail.com</a>
 </div>
 </div>
