@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piani – Clip Luke</title>
+<meta name="description" content="Scegli quante clip vuoi. Si parte sempre da 7 clip gratis.">
+<style>
+@font-face{font-family:"Instrument Serif";src:url("font/InstrumentSerif-Regular.ttf") format("truetype");font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url("font/InstrumentSerif-Italic.ttf") format("truetype");font-style:italic;font-display:swap}
+@font-face{font-family:"Manrope";src:url("font/Manrope-wght.ttf") format("truetype");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Anton";src:url("font/Anton-Regular.ttf") format("truetype");font-display:swap}
+:root{--bg:#0B0B0C;--ink:#F2EEE6;--soft:#CFC9BE;--mute:#A8A39A;--line:#23221F;--card:#131315;--acc:#D9B26F}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.5;overflow-wrap:break-word}
+a{color:var(--ink)}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.it{font-style:italic}.acc{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.narrow{max-width:1040px}
+.kicker{margin:0;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--acc);font-weight:600}
+.btn{display:inline-block;text-decoration:none;background:var(--acc);color:#0B0B0C;padding:16px 28px;border-radius:999px;
+  font-weight:700;font-size:16px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid #4A4740;font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+header.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:24px;padding-bottom:24px}
+.logo{text-decoration:none;font-size:30px}
+nav.menu{display:flex;flex-wrap:wrap;align-items:center;gap:22px;font-size:15px;font-weight:500}
+nav.menu a{text-decoration:none;color:var(--soft)}
+nav.menu a.btn{color:#0B0B0C;padding:11px 20px;font-size:15px}
+nav.menu a[aria-current]{color:var(--ink);font-weight:700}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:56px;padding-top:48px;padding-bottom:88px}
+.hero>div{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:26px}
+h1{margin:0;font-size:clamp(46px,6.4vw,96px);line-height:.98;letter-spacing:-1px}
+.lead{margin:0;font-size:19px;line-height:1.6;color:var(--soft);max-width:560px}
+.pills{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--mute)}
+.phones{display:flex;justify-content:center;align-items:flex-start;gap:16px}
+.phone{flex:0 1 170px;min-width:0;aspect-ratio:9/16;border-radius:24px;background:#17171A;border:1px solid #2A2925;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.phone:nth-child(1){margin-top:48px}.phone:nth-child(3){margin-top:96px}
+.phone p{margin:0 0 14px;font-family:"Anton",Impact,sans-serif;font-size:24px;line-height:1.05;text-align:center;
+  text-transform:uppercase;color:#fff}
+.bar{height:4px;border-radius:4px;background:#2A2925}.bar i{display:block;height:4px;border-radius:4px;background:var(--acc)}
+.band{border-top:1px solid #1F1E1B;border-bottom:1px solid #1F1E1B;background:#0F0F10}
+.band .wrap{padding-top:88px;padding-bottom:88px;display:flex;flex-direction:column;gap:22px}
+.big{margin:0;font-size:clamp(28px,3.6vw,52px);line-height:1.18}
+.sec{padding-top:100px;padding-bottom:100px;display:flex;flex-direction:column;gap:48px}
+h2{margin:0;font-size:clamp(34px,4vw,60px);line-height:1.05}
+.cards{display:flex;flex-wrap:wrap;gap:22px}
+.card{flex:1 1 280px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px;
+  display:flex;flex-direction:column;gap:14px}
+.card .n{font-size:46px;line-height:1;color:var(--acc)}
+.card h3{margin:0;font-size:22px}
+.card p{margin:0;font-size:16px;line-height:1.6;color:var(--soft)}
+.light{background:#F2EEE6;color:#141413}
+.light .wrap{padding-top:100px;padding-bottom:100px;display:flex;flex-wrap:wrap;gap:56px}
+.light .kicker{color:#8A6A2E;font-weight:700}
+.light .intro{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.light .intro p{margin:0;font-size:17px;line-height:1.6;color:#4A4740}
+.grid{flex:2 1 520px;min-width:0;margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;background:#D8D2C6;border:1px solid #D8D2C6;border-radius:20px;overflow:hidden}
+.grid li{background:#F2EEE6;padding:26px;display:flex;flex-direction:column;gap:8px}
+.grid b{font-size:17px}.grid span{font-size:15px;line-height:1.55;color:#4A4740}
+.trial{border:1px solid #3A3730;border-radius:28px;padding:52px;display:flex;flex-wrap:wrap;align-items:center;gap:44px;background:#111112}
+.trial .seven{flex:0 1 240px;display:flex;flex-direction:column;gap:4px}
+.trial .seven b{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:140px;line-height:.9;color:var(--acc)}
+.trial .seven span{font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--soft);font-weight:600}
+.trial>div:last-child{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.trial p{margin:0;font-size:17px;line-height:1.6;color:var(--soft)}
+.head2{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px}
+.plan{text-decoration:none;color:var(--ink)}
+.plan .name{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--mute);font-weight:600}
+.plan .clips{font-size:17px;font-weight:600}
+.price{font-size:52px;line-height:1}.price small{font-family:"Manrope",sans-serif;font-size:16px;color:var(--mute)}
+.note{font-size:13px;color:var(--mute)}
+.who{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.who>div{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.who p{margin:0;font-size:17px;line-height:1.7;color:var(--soft)}
+.sign{font-size:40px;color:var(--acc)}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font-size:19px;font-weight:600}
+details p{margin:12px 0 0;font-size:16px;line-height:1.65;color:var(--soft);max-width:760px}
+.faq{border-top:1px solid var(--line)}
+footer{border-top:1px solid #1F1E1B}
+footer .wrap{padding-top:64px;padding-bottom:40px;display:flex;flex-direction:column;gap:36px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px}
+.foot>div{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.foot .serif{font-size:38px;line-height:1.05}
+.legal{flex:0 1 260px;display:flex;flex-direction:column;gap:10px;font-size:15px}
+.legal a{color:var(--soft)}
+.small{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px;color:#8F8A80}
+.mail{overflow-wrap:anywhere}
+/* piani */
+.phero{padding-top:40px;padding-bottom:52px;display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center}
+.phero p.l{margin:0;font-size:18px;line-height:1.6;color:var(--soft);max-width:680px}
+.seats{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;align-items:center;border:1px solid #3A3730;
+  border-radius:999px;padding:10px 22px;font-size:14px;color:var(--soft)}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--acc)}
+.plans{display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;padding-bottom:88px}
+.pc{flex:1 1 250px;min-width:0;border-radius:26px;padding:32px 26px;display:flex;flex-direction:column;gap:20px;
+  background:var(--card);border:1px solid var(--line)}
+.pc.hl{background:#17150F;border-color:var(--acc)}
+.pc .top{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:30px}
+.pc h2{font-size:15px;letter-spacing:3px;text-transform:uppercase;font-weight:700;font-family:"Manrope",sans-serif}
+.badge{font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;background:#26241F;color:var(--soft)}
+.pc.hl .badge{background:var(--acc);color:#0B0B0C}
+.pc .pr{display:flex;flex-direction:column;gap:8px;padding:20px 0;border-top:1px solid #2A2925;border-bottom:1px solid #2A2925}
+.pc .pr .price{font-size:64px}.pc.hl .pr .price{color:var(--acc)}.pc.off .pr .price{color:#8F8A80}
+.pc ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--soft)}
+.pc .go{margin-top:auto}
+.pc .go a,.pc .go span{display:block;text-align:center;text-decoration:none;padding:15px 18px;border-radius:999px;font-weight:700}
+.pc .go a{border:1px solid #4A4740;color:var(--ink)}.pc.hl .go a{background:var(--acc);color:#0B0B0C;border-color:var(--acc)}
+.pc .go span{border:1px dashed #4A4740;color:#8F8A80}
+.facts{display:flex;flex-wrap:wrap;gap:22px}
+.facts div{flex:1 1 240px;min-width:0;display:flex;flex-direction:column;gap:10px;padding:26px;border:1px solid #D8D2C6;
+  border-radius:20px;background:#F7F4EE}
+.facts b{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:30px;line-height:1.1}
+.facts span{font-size:15px;line-height:1.6;color:#4A4740}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  header.top{padding-top:18px;padding-bottom:18px}
+  nav.menu{gap:12px 16px;font-size:14px}
+  .hero{gap:36px;padding-top:24px;padding-bottom:56px}
+  .hero>div{flex-basis:100%}
+  .lead{font-size:17px}
+  .phones{gap:10px}.phone{border-radius:16px;padding:10px}.phone p{font-size:16px;margin-bottom:10px}
+  .phone:nth-child(1){margin-top:24px}.phone:nth-child(3){margin-top:48px}
+  .band .wrap,.light .wrap{padding-top:56px;padding-bottom:56px}
+  .sec{padding-top:60px;padding-bottom:60px;gap:32px}
+  .card,.trial{padding:24px}
+  .grid{grid-template-columns:1fr}
+  .trial{gap:20px}.trial .seven b{font-size:96px}
+  .foot .serif{font-size:30px}
+  .btn{padding:14px 22px;font-size:15px}
+  .pc .pr .price{font-size:52px}
+  .facts b{font-size:26px}
+}
+</style>
+</head>
+<body>
+<header class="wrap top">
+<a class="logo serif" href="index.html">Clip <span class="it acc">Luke</span></a>
+<nav class="menu" aria-label="Menu principale">
+<a href="index.html#come-funziona">Come funziona</a>
+<a href="piani.html" aria-current="page">Piani</a>
+<a href="index.html#chi-siamo">Chi siamo</a>
+<a href="index.html#domande">Domande</a>
+<a class="btn" href="index.html#prova">Prova gratis</a>
+</nav>
+</header>
+<main>
+<section class="wrap phero">
+<p class="kicker">Piani</p>
+<h1 class="serif">Scegli quante clip vuoi.</h1>
+<p class="l">Si parte sempre da 7 clip gratis. Poi scegli il piano che va col tuo ritmo di live.</p>
+<div class="seats"><span class="dot" aria-hidden="true"></span><span>Prezzo fondatori per i primi 10 streamer · posti rimasti: <strong>10 su 10</strong> (al 14/10/2026)</span></div>
+</section>
+<section class="wrap plans" aria-label="I piani">
+<article class="pc">
+<div class="top"><h2>Base</h2></div>
+<div><div class="clips" style="font-size:20px;font-weight:700">3 clip a settimana</div><div class="note" style="font-size:14px">Dalle tue live fino a 2 ore a settimana</div></div>
+<div class="pr"><span class="price serif">29<small> € al mese</small></span>
+<span class="note">Prezzo fondatori. Dopo i primi 10 streamer: 39 € al mese.</span></div>
+<p style="margin:0;font-size:16px;font-weight:600">Per iniziare a pubblicare con regolarità, senza montare niente.</p>
+<ul><li>Titolo e hashtag accanto a ogni clip</li><li>Sottotitoli e formato verticale 9:16</li><li>Consegna entro 48 ore dal VOD</li><li>Correzioni finché c&#x27;è il materiale</li></ul>
+<div class="go"><a href="index.html#prova">Inizia con la prova gratis</a></div>
+</article>
+<article class="pc hl">
+<div class="top"><h2>Plus</h2><span class="badge">Consigliato</span></div>
+<div><div class="clips" style="font-size:20px;font-weight:700">Una clip al giorno</div><div class="note" style="font-size:14px">Dalle tue live fino a 3 ore a settimana</div></div>
+<div class="pr"><span class="price serif">49<small> € al mese</small></span>
+<span class="note">Prezzo fondatori. Dopo i primi 10 streamer: 69 € al mese.</span></div>
+<p style="margin:0;font-size:16px;font-weight:600">Un contenuto nuovo ogni giorno, anche quando non sei in live.</p>
+<ul><li>Titolo e hashtag accanto a ogni clip</li><li>Sottotitoli e formato verticale 9:16</li><li>Consegna entro 48 ore dal VOD</li><li>Correzioni finché c&#x27;è il materiale</li></ul>
+<div class="go"><a href="index.html#prova">Inizia con la prova gratis</a></div>
+</article>
+<article class="pc">
+<div class="top"><h2>Pro</h2></div>
+<div><div class="clips" style="font-size:20px;font-weight:700">Due clip al giorno</div><div class="note" style="font-size:14px">Dalle tue live fino a 5 ore a settimana</div></div>
+<div class="pr"><span class="price serif">89<small> € al mese</small></span>
+<span class="note">Prezzo fondatori. Dopo i primi 10 streamer: 119 € al mese.</span></div>
+<p style="margin:0;font-size:16px;font-weight:600">Due momenti al giorno da pubblicare, per chi fa tante live.</p>
+<ul><li>Titolo e hashtag accanto a ogni clip</li><li>Sottotitoli e formato verticale 9:16</li><li>Consegna entro 48 ore dal VOD</li><li>Correzioni finché c&#x27;è il materiale</li></ul>
+<div class="go"><a href="index.html#prova">Inizia con la prova gratis</a></div>
+</article>
+<article class="pc off">
+<div class="top"><h2>MAX</h2><span class="badge">In arrivo</span></div>
+<div><div class="clips" style="font-size:20px;font-weight:700">Fino a 33 clip a settimana</div><div class="note" style="font-size:14px">Dalle tue live fino a 10 ore a settimana</div></div>
+<div class="pr"><span class="price serif">149<small> € al mese</small></span>
+<span class="note">Prezzo fondatori. Dopo i primi 10 streamer: 259 € al mese.</span></div>
+<p style="margin:0;font-size:16px;font-weight:600">Per chi vive in live e vuole usare ogni ora.</p>
+<ul><li>Per chi ha 5-10 mila follower e almeno 10 ore di live a settimana</li><li>Titolo e hashtag accanto a ogni clip</li><li>Sottotitoli e formato verticale 9:16</li><li>Consegna entro 48 ore dal VOD</li><li>Correzioni finché c&#x27;è il materiale</li></ul>
+<div class="go"><span>Presto disponibile</span></div>
+</article>
+</section>
+<section class="light" aria-label="Come si paga"><div class="wrap"><div class="facts">
+<div><b>Con PayPal</b><span>Si paga una volta al mese, in anticipo. I dati della carta li vede solo PayPal.</span></div>
+<div><b>Prezzo bloccato</b><span>I primi 10 streamer che si abbonano pagano il prezzo fondatori, bloccato finché pagano entro ogni scadenza.</span></div>
+<div><b>14 giorni per ripensarci</b><span>Se agisci come consumatore puoi recedere entro 14 giorni, come spiegano le condizioni. <a href="termini.html" style="color:#4A4740">Termini, punto 10</a>.</span></div>
+</div></div></section>
+<section class="wrap narrow sec" aria-label="Domande sui piani">
+<h2 class="serif">Domande sui piani</h2>
+<div class="faq"><details><summary>Le clip sono mie?</summary><p>Niente password, niente accessi al tuo account: pubblichi tu, e le clip sono tue.</p></details></div>
+</section>
+</main>
+<footer id="contatti">
+<div class="wrap">
+<div class="foot">
+<div>
+<span class="serif">Pronto a dare una seconda vita alle tue live?</span>
+<div class="row">
+<a class="btn ghost mail" href="mailto:campanaluca.clip@gmail.com">campanaluca.clip@gmail.com</a>
+</div>
+</div>
+<nav class="legal" aria-label="Pagine legali">
+<a href="piani.html">Piani</a>
+<a href="termini.html">Termini e condizioni</a>
+<a href="privacy.html">Informativa privacy</a>
+</nav>
+</div>
+<div class="small"><span>Clip Luke · Luca Campana · clipluke.com</span><span>Questo sito non usa cookie.</span></div>
+</div>
+</footer>
+</body>
+</html>
